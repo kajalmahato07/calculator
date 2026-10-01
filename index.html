@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#111323">
+    <title>Prism � Glass Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script%20.js" defer></script>
 </head>
 <body>
-    hello
+    <main class="stage">
+        <div class="ambient ambient-one" aria-hidden="true"></div>
+        <div class="ambient ambient-two" aria-hidden="true"></div>
+        <section class="calculator" aria-label="Calculator">
+            <header class="topbar">
+                <div class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>prism</span></div>
+                <span class="mode-label"><span class="status-dot"></span> STANDARD</span>
+            </header>
+            <div class="display" aria-live="polite" aria-atomic="true">
+                <div class="expression" id="expression"></div>
+                <output class="result" id="display" aria-label="Current value">0</output>
+            </div>
+            <div class="keypad" id="keypad" aria-label="Calculator keys">
+                <button class="key utility" data-action="clear" aria-label="Clear all">AC</button>
+                <button class="key utility" data-action="sign" aria-label="Toggle sign">+/&minus;</button>
+                <button class="key utility" data-action="percent" aria-label="Percent">%</button>
+                <button class="key operator" data-op="/" aria-label="Divide">&#247;</button>
+
+                <button class="key" data-digit="7">7</button>
+                <button class="key" data-digit="8">8</button>
+                <button class="key" data-digit="9">9</button>
+                <button class="key operator" data-op="*" aria-label="Multiply">&times;</button>
+
+                <button class="key" data-digit="4">4</button>
+                <button class="key" data-digit="5">5</button>
+                <button class="key" data-digit="6">6</button>
+                <button class="key operator" data-op="-" aria-label="Subtract">&minus;</button>
+
+                <button class="key" data-digit="1">1</button>
+                <button class="key" data-digit="2">2</button>
+                <button class="key" data-digit="3">3</button>
+                <button class="key operator" data-op="+" aria-label="Add">+</button>
+                <button class="key utility delete" data-action="delete" aria-label="Delete last digit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h11v14H9l-6-7 6-7Z"/><path d="m12 9 5 6m0-6-5 6"/></svg></button>
+                <button class="key utility" data-action="sign" aria-label="Toggle sign">+/&minus;</button>
+                <button class="key" data-digit="0">0</button>
+                <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
+                <button class="key equals" data-action="equals" aria-label="Equals">=</button>
+            </div>
+            <footer class="footnote"><span>YOUR SPACE TO CALCULATE</span><span class="keyboard-hint">KEYBOARD READY <span>?</span></span></footer>
+        </section>
+        <p class="signature">A little clarity in the numbers.</p>
+    </main>
 </body>
 </html>
+
